@@ -1,0 +1,18 @@
+<form (submit)="send()">
+    <label>Target Theaer: </label>
+    <select name="theaer" class="form-control" [(ngModel)]="movie.theaerId">
+        <option selected disabled >Select Target Theaer</option>
+        <option *ngFor="let t of theaer" value="{{t.theaerId}}">{{t.theaerName}}</option>
+    </select>
+
+    <label>MovieName: </label>
+    <input type="text" name="name" class="form-control" [(ngModel)]="movie.movieName">
+
+    <label>StartMovie: </label>
+    <input type="datetime-local" name="startMovie" class="form-control" [(ngModel)]="movie.startMovie">
+
+    <label>Time: </label>
+    <input type="time" name="time" class="form-control" [(ngModel)]="movie.time">
+
+    <button class="btn btn-primary">Add</button>
+</form>

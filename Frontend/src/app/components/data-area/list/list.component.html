@@ -1,0 +1,23 @@
+<div>
+    <select (change)="showMovie($event)">
+        <option selected disabled>Select Target Theaer</option>
+        <option *ngFor="let t of theaer" value="{{t.theaerId}}">{{t.theaerName}}</option>
+    </select>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>movieName</th>
+                <th>startMovie</th>
+                <th>time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of movie">
+                <td>{{m.movieName}}</td>
+                <td>{{m.startMovie}}</td>
+                <td>{{m.time}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
